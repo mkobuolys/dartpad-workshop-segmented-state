@@ -1,0 +1,34 @@
+name: Segmented State Pattern using flutter_bloc
+type: flutter
+
+steps:
+  - name: Introduction
+    directory: introduction
+    has_solution: false
+  - name: Code overview
+    directory: code_overview
+    has_solution: false
+  - name: BLoC base
+    directory: bloc_base
+    has_solution: true
+  - name: BLoC event
+    directory: bloc_event
+    has_solution: true
+  - name: BLoC state
+    directory: bloc_state
+    has_solution: true
+  - name: BLoC implementation
+    directory: bloc_implementation
+    has_solution: true
+  - name: Handle shape data
+    directory: handle_shape_data
+    has_solution: true
+  - name: Handle loading state
+    directory: handle_loading_state
+    has_solution: true
+  - name: Handle error state
+    directory: handle_error_state
+    has_solution: true
+  - name: Conclusion
+    directory: conclusion
+    has_solution: false

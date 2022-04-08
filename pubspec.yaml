@@ -1,0 +1,20 @@
+name: segmented_state_pattern_with_flutter_bloc
+description: DartPad workshop for the Segmented State Pattern using flutter_bloc library.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_lints: ^1.0.0
+
+flutter:
+  uses-material-design: true

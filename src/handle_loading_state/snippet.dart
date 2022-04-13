@@ -66,10 +66,10 @@ class ShapeView extends StatelessWidget {
         return Scaffold(
           appBar: AppBar(title: Text(title)),
           body: Center(
-            // TODO: Show CircularProgressIndicator when state is loading
+            // TODO (1): Show CircularProgressIndicator when state is loading
             child: Shape(shapeData: state.data),
           ),
-          // TODO: Hide FloatingActionButton when state is loading
+          // TODO (2): Hide FloatingActionButton when state is loading
           floatingActionButton: FloatingActionButton(
             child: const Icon(Icons.refresh),
             onPressed: () {

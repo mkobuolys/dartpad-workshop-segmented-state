@@ -45,7 +45,7 @@ class ShapePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Add BlocProvider and provide ShapeBloc to child widgets
+    // TODO (4): Add BlocProvider and provide ShapeBloc to child widgets
     return ShapeView(title: title);
   }
 }
@@ -67,7 +67,7 @@ class ShapeView extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.refresh),
         onPressed: () {
-          // TODO: Add ShapeLoadStarted event to BLoC
+          // TODO (5): Add ShapeLoadStarted event to BLoC
         },
       ),
     );
@@ -105,12 +105,12 @@ class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {
     required ShapeRepository shapeRepository,
   })  : _shapeRepository = shapeRepository,
         super(const ShapeState()) {
-    // TODO: Register ShapeLoadStarted event handler
+    // TODO (3): Register ShapeLoadStarted event handler
   }
 
   final ShapeRepository _shapeRepository;
 
-  // TODO: Add ShapeLoadStarted event handler
+  // TODO (2): Add ShapeLoadStarted event handler
 }
 
 // --------------------------------------------
@@ -121,7 +121,7 @@ abstract class ShapeEvent {
   const ShapeEvent();
 }
 
-// TODO: Add ShapeLoadStarted event
+// TODO (1): Add ShapeLoadStarted event
 
 // --------------------------------------------
 // BLoC state

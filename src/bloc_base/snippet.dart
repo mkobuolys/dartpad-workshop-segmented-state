@@ -97,17 +97,17 @@ class Shape extends StatelessWidget {
 // --------------------------------------------
 // Below this line are BLoC and data classes
 
-// TODO: Add ShapeBloc
+// TODO (3): Add ShapeBloc
 
 // --------------------------------------------
 // BLoC events
 
-// TODO: Add ShapeEvent
+// TODO (1): Add ShapeEvent
 
 // --------------------------------------------
 // BLoC state
 
-// TODO: Add ShapeState
+// TODO (2): Add ShapeState
 
 // --------------------------------------------
 // Shape data

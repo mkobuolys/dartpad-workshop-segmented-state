@@ -1,4 +1,4 @@
-// TODO: Remove this line
+// TODO (7): Remove this line
 // ignore_for_file: unused_field, unused_catch_clause
 
 import 'dart:math' as math show Random;
@@ -119,19 +119,19 @@ class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {
     ShapeLoadStarted event,
     Emitter<ShapeState> emit,
   ) async {
-    // TODO: Remove print statement
+    // TODO (1): Remove print statement
     print('on ShapeLoadStarted');
 
-    // TODO: Set loading state
+    // TODO (2): Set loading state
 
     try {
-      // TODO: Load shape data
+      // TODO (3): Load shape data
 
-      // TODO: Set shape data state
+      // TODO (4): Set shape data state
     } on ShapeDataException catch (e) {
-      // TODO: Set error state
+      // TODO (5): Set error state
     } finally {
-      // TODO: Set loading finished state
+      // TODO (6): Set loading finished state
     }
   }
 }

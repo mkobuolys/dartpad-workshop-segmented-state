@@ -137,16 +137,16 @@ class ShapeLoadStarted extends ShapeEvent {}
 
 @immutable
 class ShapeState {
-  // TODO: Add constructor parameters
+  // TODO (2): Add constructor parameters
   const ShapeState();
 
-  // TODO: Add color, height and width properties
+  // TODO (1): Add color, height and width properties
 
-  // TODO: Add copyWith method
+  // TODO (3): Add copyWith method
 
-  // TODO: Override equality operator
+  // TODO (4): Override equality operator
 
-  // TODO: Override hashCode getter
+  // TODO (5): Override hashCode getter
 }
 
 // --------------------------------------------

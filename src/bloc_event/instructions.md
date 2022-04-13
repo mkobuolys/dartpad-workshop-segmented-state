@@ -8,15 +8,7 @@ First of all, a specific _BLoC_ event should be created that will trigger the `S
 class ShapeLoadStarted extends ShapeEvent {}
 ```
 
-For the `ShapeBloc` to handle the event, the event handler should be registered in the _BLoC's_ constructor
-
-```
-ShapeBloc(<...>) {
-  on<ShapeLoadStarted>(_onShapeLoadStarted);
-}
-```
-
-and implemented inside the _BLoC_ (for now, let's only print "_on ShapeLoadStarted_" in the console):
+For the `ShapeBloc` to handle the event, the event handler should be implemented inside the _BLoC_ (for now, let's only print "_on ShapeLoadStarted_" in the console)
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -24,6 +16,14 @@ Future<void> _onShapeLoadStarted(
   Emitter<ShapeState> emit,
 ) async {
   print('on ShapeLoadStarted');
+}
+```
+
+and registered in the _BLoC's_ constructor:
+
+```
+ShapeBloc(<...>) {
+  on<ShapeLoadStarted>(_onShapeLoadStarted);
 }
 ```
 

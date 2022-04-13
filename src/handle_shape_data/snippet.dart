@@ -61,11 +61,11 @@ class ShapeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Add BlocBuilder of ShapeBloc
+    // TODO (1): Add BlocBuilder of ShapeBloc
     return Scaffold(
       appBar: AppBar(title: Text(title)),
       body: const Center(
-        // TODO: Use shape data from state
+        // TODO (2): Use shape data from state
         child: Shape(),
       ),
       floatingActionButton: FloatingActionButton(

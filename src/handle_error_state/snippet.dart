@@ -61,10 +61,10 @@ class ShapeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: Replace BlocBuilder with BlocConsumer
+    // TODO (1): Replace BlocBuilder with BlocConsumer
     return BlocBuilder<ShapeBloc, ShapeState>(
-      // TODO: Add listenWhen and check if error property has changed
-      // TODO: Add listener and show error snackbar if error is not null
+      // TODO (3): Add listenWhen and check if error property has changed
+      // TODO (2): Add listener and show error snackbar if error is not null
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(title: Text(title)),

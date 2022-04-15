@@ -2,13 +2,13 @@
 
 As already mentioned, methods inside the _BLoC_ could be triggered by adding events - let's implement this behaviour.
 
-First of all, a specific _BLoC_ event should be created that will trigger the `ShapeData` loading inside the `ShapeBloc`:
+First of all, a specific _BLoC_ event is created that will trigger the `ShapeData` loading inside the `ShapeBloc`:
 
 ```
 class ShapeLoadStarted extends ShapeEvent {}
 ```
 
-For the `ShapeBloc` to handle the event, the event handler should be implemented inside the _BLoC_ (for now, let's only print "_on ShapeLoadStarted_" in the console)
+For the `ShapeBloc` to handle the event, the event handler must be implemented inside the _BLoC_ (for now, let's only print "_on ShapeLoadStarted_" in the DartPad console):
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -43,7 +43,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-What's left is finally adding a `ShapeLoadStarted` to the _BLoC_ on the floating action button (FAB) press:
+What's left is finally adding a `ShapeLoadStarted` to the _BLoC_ on the floating action button (FAB) tap:
 
 ```
 @override
@@ -60,6 +60,6 @@ Widget build(BuildContext context) {
 }
 ```
 
-If you run the application now, you should notice that "_on ShapeLoadStarted_" is printed in the console once the FAB is pressed. **Congratulations**, you have just connected your UI with `ShapeBloc`!
+If you run the app now, you should notice that "_on ShapeLoadStarted_" is printed in the DartPad console once the FAB is tapped. **Congratulations**, you have connected your UI with `ShapeBloc`!
 
 Next, we will focus on the `ShapeState` class.

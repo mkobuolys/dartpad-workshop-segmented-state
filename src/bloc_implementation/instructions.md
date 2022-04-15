@@ -2,7 +2,7 @@
 
 As defined by the _Segmented State Pattern_, we manipulate properties on the state object based on the data flow and results.
 
-Here is the workflow of how we should handle the `ShapeState` on each `ShapeLoadStarted` event:
+Here is the workflow of how the `ShapeState` is handled on each `ShapeLoadStarted` event:
 
 1. Set the `isLoading` flag to `true`;
 2. Load data from the `ShapeRepository`;
@@ -51,7 +51,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-If the `_shapeRepository.getShapeData()` operation throws a `ShapeDataException`, we should handle it inside the `catch` block and set the error in our state:
+If the `_shapeRepository.getShapeData()` operation throws a `ShapeDataException`, we must handle it inside the `catch` block and set the error in our state:
 
 ```
 Future<void> _onShapeLoadStarted(

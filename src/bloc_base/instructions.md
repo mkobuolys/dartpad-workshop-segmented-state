@@ -24,7 +24,7 @@ class ShapeState {
 }
 ```
 
-Finally, let's create a `ShapeBloc` itself that uses the defined `ShapeEvent` and `ShapeState`. Also, _BLoC_ should store a reference to `ShapeRepository` that will be used later when handling events and loading data.
+Finally, let's create a `ShapeBloc` itself that uses the defined `ShapeEvent` and `ShapeState`. Also, _BLoC_ stores a reference to `ShapeRepository` that will be used later when handling events and loading data.
 
 ```
 class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {

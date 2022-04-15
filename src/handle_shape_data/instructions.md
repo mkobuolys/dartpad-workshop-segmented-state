@@ -6,7 +6,7 @@ First stop - observing and handling the `data` property, or the _success_ state.
 
 ## Using the `data` property
 
-To begin with, we should add `BlocBuilder` to the `ShapeView` widget to handle widget building in response to new states:
+To begin with, we add `BlocBuilder` to the `ShapeView` widget to handle widget building in response to new states:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -46,4 +46,4 @@ Widget build(BuildContext context) {
 }
 ```
 
-Now you can run the code to see how the success state is handled in UI. However, the loaded shape just pops on the screen without any indication of data loading. Thus, let's handle the _loading_ state next!
+Now you can run the code to see how the success state is handled in UI. However, the loaded shape pops on the screen without any indication of data loading. Thus, let's handle the _loading_ state next!

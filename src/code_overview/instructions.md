@@ -4,9 +4,9 @@ Here, we have a simple shape generation app. Its main purpose is to load shape i
 
 Throughout this workshop, we will build on this code. We will implement the BLoC related classes (events, state and the BLoC itself), provide the BLoC to the widget tree and later handle different state flows.
 
-Try to run the app. You will notice that a shape placeholder is rendered in the center of the screen. Also, there is a floating action button that currently does nothing, but later it will trigger the shape's data loading.
+Try to run the app. You will notice that a shape placeholder is rendered in the center of the screen. Also, there is a floating action button that does nothing at the moment, but later it will trigger the shape's data loading.
 
-The UI code at the moment consists of `ShapePage` and `ShapeView` that renders the page with a basic `Scaffold` and its elements: application bar, floating action button, and body:
+The UI code at the moment consists of `ShapePage` and `ShapeView` that renders the page with a basic `Scaffold` and its elements: app bar, floating action button, and body:
 
 ```
 Scaffold(
@@ -25,7 +25,7 @@ Inside the body, we render a `Shape` widget. If the `ShapeData` is provided to t
 
 ## Shape data classes
 
-Under the _Shape data_ section in the file, you could find a custom exception `ShapeDataException`, shape data source `ShapeRepository` and the `ShapeData` model itself.
+Following the _Shape data_ section in the file, you could find a custom exception `ShapeDataException`, shape data source `ShapeRepository` and the `ShapeData` model itself.
 
 `ShapeRepository` will be used by the BLoC. This class is responsible for generating `ShapeData` properties as well as simulating an asynchronous data load - success or error.
 

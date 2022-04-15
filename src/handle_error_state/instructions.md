@@ -4,7 +4,7 @@ The last workflow to handle is the _error_ state. In case of a data loading erro
 
 ## Using the `error` property
 
-Firstly, we should "upgrade" the `BlocBuilder` widget and replace it with `BlocConsumer`. The main difference between these two widgets is that `BlocConsumer` additionally exposes a listener that could trigger an action on state change. Showing a `SnackBar` is a side action that should happen on error, thus it makes sense to use listener for that:
+Firstly, we must "upgrade" the `BlocBuilder` widget and replace it with `BlocConsumer`. The main difference between these two widgets is that `BlocConsumer` additionally exposes a listener that could trigger an action on state change. Showing a `SnackBar` is a side action that happens on error, thus it makes sense to use listener for that:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -38,7 +38,7 @@ class ShapeView extends StatelessWidget {
 
 Inside the listener, we check if the error property is not _null_. If there is an error in the state, we create a `SnackBar` and show it in the UI for 2 seconds.
 
-At the moment, the `listener` will be called on each state change. However, we are not interested in whether the `data` or `isLoading` are updated, we should only listen to the `error` changes. We can optimise this behaviour by implementing `listenWhen`:
+At the moment, the `listener` will be called on each state change. However, we are not interested in whether the `data` or `isLoading` are updated, only whether the `error` changes. We can optimise this behaviour by implementing `listenWhen`:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -60,4 +60,4 @@ class ShapeView extends StatelessWidget {
 
 Now, the listener will be triggered only on the `error` property change.
 
-You can run the application now and see the outcome of this workshop. All different state workflows are handled - after each data load, either the shape is updated, or the error message appears at the bottom of the screen.
+You can run the app now and see the outcome of this workshop. All different state workflows are handled - after each data load, either the shape is updated, or the error message appears at the bottom of the screen.

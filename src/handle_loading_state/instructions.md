@@ -1,6 +1,6 @@
 # Rendering _loading_ state
 
-When the floating action button is pressed, it initiates the data load inside the `ShapeBloc`. However, there is no indication of the loading progress. Also, the button itself remains visible and there is an urgency to press it multiples times just to trigger a change in the UI. Let's fix this!
+When the floating action button is tapped, it initiates the data load inside the `ShapeBloc`. However, there is no indication of the loading progress. Also, the button itself remains visible and there is an urgency to tap it multiples times only to trigger a change in the UI. Let's fix this!
 
 ## Using the `isLoading` property
 

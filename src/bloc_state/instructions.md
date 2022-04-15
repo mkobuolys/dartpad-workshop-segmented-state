@@ -44,9 +44,9 @@ class ShapeState {
 }
 ```
 
-As you may notice, the _success_ state is covered by the `data` property, error - by `error` one, and `isLoading` shows whether the data load is currently in progress or not.
+As you may notice, the _success_ state is covered by the `data` property, error - by `error` one, and `isLoading` shows whether the data load is in progress or not.
 
-Also, it's useful to add some helper methods to your state, like `copyWith`. This method will be used when you need to copy the current state and change only some properties of the class:
+Also, it's useful to add some helper methods to your state, like `copyWith`. This method will be used when you need to clone the current state and change only some properties of it:
 
 ```
 @immutable

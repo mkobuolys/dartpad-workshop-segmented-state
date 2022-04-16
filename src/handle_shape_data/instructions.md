@@ -6,7 +6,7 @@ First stop - observing and handling the `data` property, or the _success_ state.
 
 ## Use `data` property
 
-To begin with, add `BlocBuilder` to the `ShapeView` widget to rebuild the UI in response to the `ShapeState` change:
+_TODO 1_ - To begin with, add `BlocBuilder` to the `ShapeView` widget to rebuild the UI in response to the `ShapeState` change:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -27,7 +27,7 @@ class ShapeView extends StatelessWidget {
 }
 ```
 
-Then, render the generated shape. For this, use the `data` property from the current `ShapeBloc` state and pass it to the `Shape` widget:
+_TODO 2_ - Then, render the generated shape. For this, use the `data` property from the current `ShapeBloc` state and pass it to the `Shape` widget:
 
 ```
 @override

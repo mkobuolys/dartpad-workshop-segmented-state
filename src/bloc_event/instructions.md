@@ -4,13 +4,13 @@ As already mentioned, methods inside the _BLoC_ could be triggered by adding eve
 
 For this app, you need to create a dedicated `ShapeBloc` event to load the `ShapeData` and change the `ShapeState` later.
 
-First of all, create a specific _BLoC_ event that will trigger the `ShapeData` loading inside the `ShapeBloc` - `ShapeLoadStarted`:
+_TODO 1_ - First of all, create a specific _BLoC_ event that will trigger the `ShapeData` loading inside the `ShapeBloc` - `ShapeLoadStarted`:
 
 ```
 class ShapeLoadStarted extends ShapeEvent {}
 ```
 
-For the `ShapeBloc` to handle the event, implement a dedicated event handler inside the `ShapeBloc`. For now, only print the _"on ShapeLoadStarted"_ message in the _DartPad_ console:
+_TODO 2_ - For the `ShapeBloc` to handle the event, implement a dedicated event handler inside the `ShapeBloc`. For now, only print the _"on ShapeLoadStarted"_ message in the _DartPad_ console:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -21,7 +21,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-To map the `ShapeLoadStarted` with the event handler (`_onShapeLoadStarted()`), register it in the constructor of the `ShapeBloc`:
+_TODO 3_ - To map the `ShapeLoadStarted` with the event handler (`_onShapeLoadStarted()`), register it in the constructor of the `ShapeBloc`:
 
 ```
 ShapeBloc(<...>) {
@@ -31,7 +31,7 @@ ShapeBloc(<...>) {
 
 ## Add events from UI
 
-To be able to add events to the `ShapeBloc`, it has to be provided to the Widget tree. This way, all the child elements in the tree could access the _BLoC_, add events as well as listen to state changes:
+_TODO 4_ - To be able to add events to the `ShapeBloc`, it has to be provided to the Widget tree. This way, all the child elements in the tree could access the _BLoC_, add events as well as listen to state changes:
 
 ```
 @override
@@ -45,7 +45,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-What's left is finally adding a `ShapeLoadStarted` to the `ShapeBloc` on the floating action button (_FAB_) tap:
+_TODO 5_ - What's left is finally adding a `ShapeLoadStarted` to the `ShapeBloc` on the floating action button (_FAB_) tap:
 
 ```
 @override

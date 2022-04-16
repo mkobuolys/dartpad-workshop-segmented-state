@@ -4,9 +4,9 @@ The last workflow to handle is the _error_ state. In case of a data loading erro
 
 ## Use `error` property
 
-Firstly, "upgrade" the `BlocBuilder` widget and replace it with `BlocConsumer`. The main difference between these two widgets is that `BlocConsumer` additionally exposes a listener that could trigger an action on state change. Showing a `SnackBar` is a side action that happens on error. Thus, it makes sense to use a `listener` callback of `BlocConsumer` for that.
+_TODO 1_ - Firstly, "upgrade" the `BlocBuilder` widget and replace it with `BlocConsumer`. The main difference between these two widgets is that `BlocConsumer` additionally exposes a listener that could trigger an action on state change. Showing a `SnackBar` is a side action that happens on error. Thus, it makes sense to use a `listener` callback of `BlocConsumer` for that.
 
-Check if the error property is not `null` inside the listener. If there is an error in the state, create a `SnackBar` and show it in the UI for 2 seconds:
+_TODO 2_ - Check if the error property is not `null` inside the listener. If there is an error in the state, create a `SnackBar` and show it in the UI for 2 seconds:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -38,7 +38,7 @@ class ShapeView extends StatelessWidget {
 }
 ```
 
-At the moment, the `listener` is called on each state change. However, it should not be triggered when the `data` or `isLoading` properties are updated, only when the `error` changes. Optimise this behaviour by defining the `listenWhen` condition:
+_TODO 3_ - At the moment, the `listener` is called on each state change. However, it should not be triggered when the `data` or `isLoading` properties are updated, only when the `error` changes. Optimise this behaviour by defining the `listenWhen` condition:
 
 ```
 class ShapeView extends StatelessWidget {

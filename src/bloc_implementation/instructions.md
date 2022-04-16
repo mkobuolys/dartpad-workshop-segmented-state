@@ -15,7 +15,7 @@ Now it's time to convert this list into code!
 
 ## Implement the event handler
 
-To begin with, set that the data is loading at the beginning of the operation. Use the previously implemented `copyWith()` method that takes the current state, copies it and only replaces the `isLoading` property:
+_TODO 1-2_ - To begin with, remove the `print()` statement and set that the data is loading at the beginning of the operation. Use the previously implemented `copyWith()` method that takes the current state, copies it and only replaces the `isLoading` property:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -28,7 +28,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-Then, add the `try/catch` block that handles two data flows - success and error. First of all, load the shape data from the repository and set the result on success:
+_TODO 3-4_ - Then, add the `try/catch` block that handles two data flows - success and error. First of all, load the shape data from the repository and set the result on success:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -49,7 +49,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-If the `_shapeRepository.getShapeData()` operation throws a `ShapeDataException`, it must be handled inside the `catch` block by setting the `error` in the state:
+_TODO 5_ - If the `_shapeRepository.getShapeData()` operation throws a `ShapeDataException`, it must be handled inside the `catch` block by setting the `error` in the state:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -68,7 +68,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-Finally, set the loading progress property to `false`, which indicates the end of data loading:
+_TODO 6_ - Finally, set the loading progress property to `false`, which indicates the end of data loading:
 
 ```
 Future<void> _onShapeLoadStarted(

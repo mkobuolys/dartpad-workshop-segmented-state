@@ -25,7 +25,9 @@ class ShapeError extends ShapeState {
 }
 ```
 
-However, when using the **_Segmented State Pattern_**, only a single class is needed - different flows are implemented as class properties:
+However, when using the **_Segmented State Pattern_**, only a single class is needed - different flows are implemented as class properties.
+
+_TODO 1-2_ - Add `data`, `error` and `isLoading` properties to the `ShapeState` class and its constructor:
 
 ```
 @immutable
@@ -46,7 +48,7 @@ class ShapeState {
 
 As you may notice, the _success_ state is covered by the `data` property, error - by `error` one, and `isLoading` shows whether the data load is in progress or not.
 
-Also, it's practical to add some helper methods to your state, like `copyWith()`. This method is used when you need to clone the current state but only change some properties of it:
+_TODO 3_ - Also, it's practical to add some helper methods to your state, like `copyWith()`. This method is used when you need to clone the current state but only change some properties of it:
 
 ```
 @immutable
@@ -69,7 +71,7 @@ class ShapeState {
 }
 ```
 
-Lastly, you need to override the equality operator (`==`) and `hashCode` getter so that state objects are compared by their property values and not the class reference:
+_TODO 4-5_ - Lastly, you need to override the equality operator (`==`) and `hashCode` getter so that state objects are compared by their property values and not the class reference:
 
 ```
 @immutable

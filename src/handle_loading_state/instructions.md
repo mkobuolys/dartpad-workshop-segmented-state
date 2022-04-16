@@ -4,7 +4,7 @@ At the moment, tapping the floating action button initiates the data load inside
 
 ## Use `isLoading` property
 
-To show that the shape data loading is in progress, render the `CircularProgressIndicator` instead of the `Shape` widget. For this, use the `isLoading` property from the current `ShapeBloc` state:
+_TODO 1_ - To show that the shape data loading is in progress, render the `CircularProgressIndicator` instead of the `Shape` widget. For this, use the `isLoading` property from the current `ShapeBloc` state:
 
 ```
 @override
@@ -25,7 +25,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-Also, it would be nice to hide the floating action button when the data load is in progress. To achieve this, set the `floatingActionButton` property inside `Scaffold` to `null` when the `isLoading` property is `true`:
+_TODO 2_ - Also, it would be nice to hide the floating action button when the data load is in progress. To achieve this, set the `floatingActionButton` property inside `Scaffold` to `null` when the `isLoading` property is `true`:
 
 ```
 @override

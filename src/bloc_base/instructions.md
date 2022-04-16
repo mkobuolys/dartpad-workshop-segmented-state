@@ -4,7 +4,7 @@ Each Business Logic Component (_BLoC_) consists of three parts: _BLoC_, _Events_
 
 When you need to execute a specific operation in the _BLoC_, an event must be sent from the UI. Then, the concrete _BLoC_ handles the event and updates the state.
 
-![BLoC Workflow](https://dartpad-ws-segmented-state.web.app/images/bloc.png)
+![BLoC Workflow](https://dartpad-ws-segmented-state.web.app/images/bloc_workflow.png)
 
 _TODO 1_ - To begin with, add a base class for the `ShapeBloc` event - `ShapeEvent`:
 

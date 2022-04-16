@@ -1,8 +1,8 @@
-# Handling the Segmented State
+# Handle the _Segmented State_
 
-As defined by the _Segmented State Pattern_, we manipulate properties on the state object based on the data flow and results.
+As defined by the _Segmented State Pattern_, you do not create individual objects for each state but rather manipulate properties on the state object based on the data flow and results.
 
-Here is the workflow of how the `ShapeState` is handled on each `ShapeLoadStarted` event:
+Here is the workflow of how the `ShapeBloc` should handle the `ShapeLoadStarted` event and how the `ShapeState` changes:
 
 1. Set the `isLoading` flag to `true`;
 2. Load data from the `ShapeRepository`;
@@ -11,11 +11,11 @@ Here is the workflow of how the `ShapeState` is handled on each `ShapeLoadStarte
    - In case of an exception, set the `error` property;
 4. Set the `isLoading` flag to `false`.
 
-Let's convert this list into code!
+Now it's time to convert this list into code!
 
-## Implementing handler
+## Implement the event handler
 
-Firstly, we set that the data is loading at the beginning of operation:
+To begin with, set that the data is loading at the beginning of the operation. Use the previously implemented `copyWith()` method that takes the current state, copies it and only replaces the `isLoading` property:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -28,9 +28,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-As you may notice, we are using the previously implemented `copyWith` method that takes the current state, copies it and only replaces the `isLoading` property.
-
-Then, add the `try/catch` block that will handle two data flows - success and error. First of all, we load the data from the repository and set the result on success:
+Then, add the `try/catch` block that handles two data flows - success and error. First of all, load the shape data from the repository and set the result on success:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -51,7 +49,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-If the `_shapeRepository.getShapeData()` operation throws a `ShapeDataException`, we must handle it inside the `catch` block and set the error in our state:
+If the `_shapeRepository.getShapeData()` operation throws a `ShapeDataException`, it must be handled inside the `catch` block by setting the `error` in the state:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -70,7 +68,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-Finally, we set the loading progress property to _false_ - the operation is finished.
+Finally, set the loading progress property to `false`, which indicates the end of data loading:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -87,6 +85,6 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-We were reusing the same state and updated individual properties - the state changes will be observed later on by the UI and used to render the specific components or execute additional logic.
+You were reusing the same state and updated individual properties - the state changes will be observed later on by the UI and used to render the specific components or execute additional logic.
 
-In the next step, we will handle the loading state in our UI!
+Next, you will handle the `ShapeState` in the UI layer, starting with the loading state!

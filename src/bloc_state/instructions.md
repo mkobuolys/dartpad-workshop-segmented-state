@@ -1,6 +1,6 @@
-# Implementing `ShapeState`
+# Implement `ShapeState`
 
-If we use the **_Single Flow Pattern_**, the `ShapeBloc` state classes would look like this:
+If you use the **_Single Flow Pattern_**, the `ShapeBloc` state classes would look like this:
 
 ```
 @immutable
@@ -46,7 +46,7 @@ class ShapeState {
 
 As you may notice, the _success_ state is covered by the `data` property, error - by `error` one, and `isLoading` shows whether the data load is in progress or not.
 
-Also, it's useful to add some helper methods to your state, like `copyWith`. This method will be used when you need to clone the current state and change only some properties of it:
+Also, it's practical to add some helper methods to your state, like `copyWith()`. This method is used when you need to clone the current state but only change some properties of it:
 
 ```
 @immutable
@@ -69,7 +69,7 @@ class ShapeState {
 }
 ```
 
-Lastly, the equality operator (`==`) and `hashCode` getter must be overridden so that state objects could be compared by their property values and not the class reference:
+Lastly, you need to override the equality operator (`==`) and `hashCode` getter so that state objects are compared by their property values and not the class reference:
 
 ```
 @immutable
@@ -93,4 +93,4 @@ class ShapeState {
 
 In real-world projects, it is recommended to use packages like [equatable](https://pub.dev/packages/equatable) or [freezed](https://pub.dev/packages/freezed) that will cover the required equality comparison overrides for you.
 
-In the next step, we will implement the actual data loading and handle the _Segmented State_ of the `ShapeBloc`.
+In the next step, you will implement the actual data loading and handle the _Segmented State_ of the `ShapeBloc`.

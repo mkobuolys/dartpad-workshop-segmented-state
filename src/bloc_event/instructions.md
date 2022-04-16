@@ -1,14 +1,16 @@
-# Implementing `ShapeLoadStarted` event
+# Implement `ShapeLoadStarted` event
 
-As already mentioned, methods inside the _BLoC_ could be triggered by adding events - let's implement this behaviour.
+As already mentioned, methods inside the _BLoC_ could be triggered by adding events. Then, each specific event uses the corresponding event handler that executes the logic and changes the state.
 
-First of all, a specific _BLoC_ event is created that will trigger the `ShapeData` loading inside the `ShapeBloc`:
+For this app, you need to create a dedicated `ShapeBloc` event to load the `ShapeData` and change the `ShapeState` later.
+
+First of all, create a specific _BLoC_ event that will trigger the `ShapeData` loading inside the `ShapeBloc` - `ShapeLoadStarted`:
 
 ```
 class ShapeLoadStarted extends ShapeEvent {}
 ```
 
-For the `ShapeBloc` to handle the event, the event handler must be implemented inside the _BLoC_ (for now, let's only print "_on ShapeLoadStarted_" in the DartPad console):
+For the `ShapeBloc` to handle the event, implement a dedicated event handler inside the `ShapeBloc`. For now, only print the _"on ShapeLoadStarted"_ message in the _DartPad_ console:
 
 ```
 Future<void> _onShapeLoadStarted(
@@ -19,7 +21,7 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-and registered in the _BLoC's_ constructor:
+To map the `ShapeLoadStarted` with the event handler (`_onShapeLoadStarted()`), register it in the constructor of the `ShapeBloc`:
 
 ```
 ShapeBloc(<...>) {
@@ -27,9 +29,9 @@ ShapeBloc(<...>) {
 }
 ```
 
-## Adding events from UI
+## Add events from UI
 
-To be able to add events to the _BLoC_, the `ShapeBloc` must be provided to the Widget tree. This way, all the child elements in the tree could access the _BLoC_, add events as well as listen to state changes:
+To be able to add events to the `ShapeBloc`, it has to be provided to the Widget tree. This way, all the child elements in the tree could access the _BLoC_, add events as well as listen to state changes:
 
 ```
 @override
@@ -43,7 +45,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-What's left is finally adding a `ShapeLoadStarted` to the _BLoC_ on the floating action button (FAB) tap:
+What's left is finally adding a `ShapeLoadStarted` to the `ShapeBloc` on the floating action button (_FAB_) tap:
 
 ```
 @override
@@ -60,6 +62,8 @@ Widget build(BuildContext context) {
 }
 ```
 
-If you run the app now, you should notice that "_on ShapeLoadStarted_" is printed in the DartPad console once the FAB is tapped. **Congratulations**, you have connected your UI with `ShapeBloc`!
+If you run the app now, you should notice that _"on ShapeLoadStarted"_ is printed in the DartPad console once the _FAB_ is tapped.
 
-Next, we will focus on the `ShapeState` class.
+**Congratulations!** You have connected your UI with `ShapeBloc`!
+
+Next, you will focus on the `ShapeState` class and implement its details.

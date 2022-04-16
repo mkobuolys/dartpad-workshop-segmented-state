@@ -4,6 +4,13 @@ Welcome to **Segmented State Pattern** using the `flutter_bloc` library workshop
 
 In this workshop, you will learn the principles of a segmented state and how to implement it using the `flutter_bloc` library. Once you know the basics, the pattern could be applied to other state management solutions, too!
 
+This workshop is authored by Mangirdas Kazlauskas 🇱🇹💙
+
+- Twitter: [@mkobuolys](https://twitter.com/mkobuolys)
+- GitHub: [@mkobuolys](https://github.com/mkobuolys)
+
+Feel free to reach out if you have any problems or questions during the workshop!
+
 ## What is _BLoC_, `bloc` and `flutter_bloc`?
 
 ![BLoC](https://dartpad-ws-segmented-state.web.app/images/bloc.png)

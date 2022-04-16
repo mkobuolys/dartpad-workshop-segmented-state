@@ -1,12 +1,12 @@
-# Creating BLoC classes
+# Create BLoC classes
 
-Each _BLoC_ (Business Logic Component) consists of three parts: `BLoC`, `Events` and `State`. Let's start by defining them in our app.
+Each Business Logic Component (_BLoC_) consists of three parts: _BLoC_, _Events_ and _State_. In this step, you will add them to the app.
 
-When we want to execute a specific operation in the _BLoC_, from the UI we send the event to the _BLoC_. Then, the specific _BLoC_ handles the event and updates the state.
+When you need to execute a specific operation in the _BLoC_, an event must be sent from the UI. Then, the concrete _BLoC_ handles the event and updates the state.
 
 ![BLoC Workflow](https://dartpad-ws-segmented-state.web.app/images/bloc.png)
 
-Let's start by adding a base class for the `ShapeBloc` event:
+To begin with, add a base class for the `ShapeBloc` event - `ShapeEvent`:
 
 ```
 @immutable
@@ -15,7 +15,7 @@ abstract class ShapeEvent {
 }
 ```
 
-Then, add a base class for the `ShapeBloc` state class:
+Then, add a base class for the `ShapeBloc` state class - `ShapeState`:
 
 ```
 @immutable
@@ -24,7 +24,7 @@ class ShapeState {
 }
 ```
 
-Finally, let's create a `ShapeBloc` itself that uses the defined `ShapeEvent` and `ShapeState`. Also, _BLoC_ stores a reference to `ShapeRepository` that will be used later when handling events and loading data.
+Finally, using the _flutter_bloc_ library, create a `ShapeBloc` that uses the defined `ShapeEvent` and `ShapeState` classes. Notice that the `ShapeBloc` stores a reference to `ShapeRepository` that will handle events and load data later:
 
 ```
 class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {
@@ -37,4 +37,4 @@ class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {
 }
 ```
 
-Now we are ready to add a specific `ShapeEvent` to trigger a `ShapeData` load.
+Now, it's time to add a specific `ShapeEvent` that triggers the `ShapeData` load inside the `ShapeBloc`.

@@ -1,10 +1,10 @@
 # Code overview
 
-Here, we have a simple shape generation app. Its main purpose is to load shape information (color and dimensions) and render it in the UI.
+Here, you see a simple shape generation app. This app loads shape information (color and dimensions) and renders the shape in the UI.
 
-Throughout this workshop, we will build on this code. We will implement the BLoC related classes (events, state and the BLoC itself), provide the BLoC to the widget tree and later handle different state flows.
+Throughout this workshop, you will build on this codebase. You will implement the _BLoC_ related classes (events, state and the _BLoC_ itself), provide the _BLoC_ to the widget tree and later handle different state flows in the UI.
 
-Try to run the app. You will notice that a shape placeholder is rendered in the center of the screen. Also, there is a floating action button that does nothing at the moment, but later it will trigger the shape's data loading.
+Try to run the app now. You should notice that a shape placeholder is rendered in the center of the screen. Also, there is a floating action button that does nothing at the moment, but later it will trigger the shape's data loading.
 
 The UI code at the moment consists of `ShapePage` and `ShapeView` that renders the page with a basic `Scaffold` and its elements: app bar, floating action button, and body:
 
@@ -21,13 +21,13 @@ Scaffold(
 );
 ```
 
-Inside the body, we render a `Shape` widget. If the `ShapeData` is provided to the widget, a rectangular of a specific color is rendered, a placeholder otherwise.
+`Shape` widget is rendered inside the body. If the `ShapeData` value is available, it renders a rectangular of a specific color, a placeholder otherwise.
 
 ## Shape data classes
 
-Following the _Shape data_ section in the file, you could find a custom exception `ShapeDataException`, shape data source `ShapeRepository` and the `ShapeData` model itself.
+Following the _Shape data_ section in the file, you could find a custom exception - `ShapeDataException`, shape data source - `ShapeRepository` - and the `ShapeData` model itself.
 
-`ShapeRepository` will be used by the BLoC. This class is responsible for generating `ShapeData` properties as well as simulating an asynchronous data load - success or error.
+`ShapeRepository` will be used by the implemented _BLoC_ class. The repository is responsible for generating `ShapeData` properties and simulating an asynchronous data load - success or error:
 
 ```
 class ShapeRepository {
@@ -51,4 +51,4 @@ class ShapeRepository {
 }
 ```
 
-In the next step, you will start with shaping (no pun intended) your BLoC classes.
+Next, you will start with shaping (no pun intended) _BLoC_ related classes.

@@ -10,7 +10,7 @@ To keep better track of the **Segmented State Pattern** in this workshop, it is 
 
 ![Segmented State Pattern](https://dartpad-ws-segmented-state.web.app/images/segmented_state_pattern.png)
 
-When using `flutter_bloc`, a common way to handle the BLoC state is by creating separate classes for each specific state (_initial_, _loading_, _success_, _error_) and switching between them. This is called a **Single Flow Pattern** since only a single state could exist at any given moment.
+When using `flutter_bloc`, a common way to handle the BLoC state is by creating separate classes for each specific state (_initial_, _loading_, _success_, _error_) and switching between them. It is a **Single Flow Pattern** since only a single state could exist at any given moment.
 
 This way of handling states is predictable and isolated (each specific state class contains information only about that state). However, it also brings several challenges:
 
@@ -37,6 +37,6 @@ class State {
 }
 ```
 
-This way, you always have three different flows in your state at any given moment, hence it becomes easier to transform, combine and later observe them.
+This way, you always have three different flows in your state at any given moment. Hence, it becomes easier to transform, combine and later observe them.
 
-Now that we're familiar with the idea of **Segmented State Pattern**, let's move to the next step to review the initial code.
+In the next step, you will review the initial code of this workshop.

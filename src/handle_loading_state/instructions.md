@@ -1,10 +1,10 @@
-# Rendering _loading_ state
+# Render _loading_ state
 
-When the floating action button is tapped, it initiates the data load inside the `ShapeBloc`. However, there is no indication of the loading progress. Also, the button itself remains visible and there is an urgency to tap it multiples times only to trigger a change in the UI. Let's fix this!
+At the moment, tapping the floating action button initiates the data load inside the `ShapeBloc`. However, there is no indication of the loading progress. Also, the button itself remains visible, and there is an urgency to tap it multiples times only to trigger a change in the UI. It's time to fix this!
 
-## Using the `isLoading` property
+## Use `isLoading` property
 
-To show that the shape data loading is in progress, we could render the `CircularProgressIndicator` instead of the `Shape` widget. For this, we use the `isLoading` property from the current `ShapeBloc` state:
+To show that the shape data loading is in progress, render the `CircularProgressIndicator` instead of the `Shape` widget. For this, use the `isLoading` property from the current `ShapeBloc` state:
 
 ```
 @override
@@ -25,7 +25,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-Also, it would be nice to hide the floating action button when the data load is in progress. We can achieve this by setting the `floatingActionButton` property inside `Scaffold` to _null_ when the `isLoading` property is _true_:
+Also, it would be nice to hide the floating action button when the data load is in progress. To achieve this, set the `floatingActionButton` property inside `Scaffold` to `null` when the `isLoading` property is `true`:
 
 ```
 @override
@@ -48,6 +48,6 @@ Widget build(BuildContext context) {
 }
 ```
 
-Now you can run the code to see how the loading state is handled in UI once we start the data load. Notice that the floating action button even supports a smooth scale transition out of the box!
+Run the code and tap on the floating action button to see how the loading state is handled in UI once you initiate the data load. Notice that the _FAB_ even supports a smooth scale transition out of the box!
 
 Indeed, the `CircularProgressIndicator` renders correctly. However, the shape does not get updated in error cases, and no visual indication is visible in the UI. The last state workflow to handle is the _error_ one.

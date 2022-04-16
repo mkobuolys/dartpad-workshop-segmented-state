@@ -1,10 +1,12 @@
-# Rendering _error_ state
+# Render _error_ state
 
-The last workflow to handle is the _error_ state. In case of a data loading error, it would be nice to show a `SnackBar` with the error message that is stored in the `ShapeDataException` object. Is it hard to implement? Not at all!
+The last workflow to handle is the _error_ state. In case of a data loading error, it would be nice to show a `SnackBar` with the error message stored in the `ShapeDataException` object. Is it complex to implement? Not at all!
 
-## Using the `error` property
+## Use `error` property
 
-Firstly, we must "upgrade" the `BlocBuilder` widget and replace it with `BlocConsumer`. The main difference between these two widgets is that `BlocConsumer` additionally exposes a listener that could trigger an action on state change. Showing a `SnackBar` is a side action that happens on error, thus it makes sense to use listener for that:
+Firstly, "upgrade" the `BlocBuilder` widget and replace it with `BlocConsumer`. The main difference between these two widgets is that `BlocConsumer` additionally exposes a listener that could trigger an action on state change. Showing a `SnackBar` is a side action that happens on error. Thus, it makes sense to use a `listener` callback of `BlocConsumer` for that.
+
+Check if the error property is not `null` inside the listener. If there is an error in the state, create a `SnackBar` and show it in the UI for 2 seconds:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -36,9 +38,7 @@ class ShapeView extends StatelessWidget {
 }
 ```
 
-Inside the listener, we check if the error property is not _null_. If there is an error in the state, we create a `SnackBar` and show it in the UI for 2 seconds.
-
-At the moment, the `listener` will be called on each state change. However, we are not interested in whether the `data` or `isLoading` are updated, only whether the `error` changes. We can optimise this behaviour by implementing `listenWhen`:
+At the moment, the `listener` is called on each state change. However, it should not be triggered when the `data` or `isLoading` properties are updated, only when the `error` changes. Optimise this behaviour by defining the `listenWhen` condition:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -58,6 +58,6 @@ class ShapeView extends StatelessWidget {
 }
 ```
 
-Now, the listener will be triggered only on the `error` property change.
+Now, the `listener` will be triggered only on the `error` property change.
 
 You can run the app now and see the outcome of this workshop. All different state workflows are handled - after each data load, either the shape is updated, or the error message appears at the bottom of the screen.

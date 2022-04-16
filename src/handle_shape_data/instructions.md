@@ -1,12 +1,12 @@
-# Rendering _success_ state (shape data)
+# Render _success_ state (shape data)
 
 Finally, it's time to get to the visual part of this workshop 🎉
 
 First stop - observing and handling the `data` property, or the _success_ state.
 
-## Using the `data` property
+## Use `data` property
 
-To begin with, we add `BlocBuilder` to the `ShapeView` widget to handle widget building in response to new states:
+To begin with, add `BlocBuilder` to the `ShapeView` widget to rebuild the UI in response to the `ShapeState` change:
 
 ```
 class ShapeView extends StatelessWidget {
@@ -27,7 +27,7 @@ class ShapeView extends StatelessWidget {
 }
 ```
 
-Then, we can render the generated shape. For this, we use the `data` property from the current `ShapeBloc` state:
+Then, render the generated shape. For this, use the `data` property from the current `ShapeBloc` state and pass it to the `Shape` widget:
 
 ```
 @override
@@ -46,4 +46,4 @@ Widget build(BuildContext context) {
 }
 ```
 
-Now you can run the code to see how the success state is handled in UI. However, the loaded shape pops on the screen without any indication of data loading. Thus, let's handle the _loading_ state next!
+Run the code to see how the _success_ state is handled in UI. Notice that the loaded shape pops on the screen without any indication of data loading. Thus, you will handle the _loading_ state next!

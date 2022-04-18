@@ -29,7 +29,7 @@ _Note:_ In this workshop, the _BLoC_ term is used to refer to specific implement
 
 ![Segmented State Pattern](https://dartpad-ws-segmented-state.web.app/images/segmented_state_pattern.png)
 
-When using `flutter_bloc`, a common way to handle the BLoC state is by creating separate classes for each specific state (_initial_, _loading_, _success_, _error_) and switching between them. It is a _Single Flow Pattern_ since only a single state could exist at any given moment.
+When using `flutter_bloc`, a common way to handle the _BLoC_ state is by creating separate classes for each specific state (_initial_, _loading_, _success_, _error_) and switching between them. It is a _Single Flow Pattern_ since only a single state could exist at any given moment.
 
 This way of handling states is predictable and isolated (each specific state class contains information only about that state). However, it also brings several challenges:
 

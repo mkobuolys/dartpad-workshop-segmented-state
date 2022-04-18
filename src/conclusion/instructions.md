@@ -10,4 +10,4 @@ The _Segmented State Pattern_ could be applied to other state management solutio
 
 _Triple_ is a direct implementation of the _Segmented State pattern_, hence if you enjoyed this workshop - it's worth giving this state management solution a try.
 
-**Good luck in your further Flutter State Management journey!**
+**Best of luck in your further Flutter State Management journey!**

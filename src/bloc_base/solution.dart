@@ -137,7 +137,7 @@ class ShapeRepository {
     final random = math.Random();
 
     // Simulate asynchronous data loading
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 1));
 
     // Simulate data loading error
     if (random.nextBool()) throw ShapeDataException();

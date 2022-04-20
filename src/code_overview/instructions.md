@@ -65,7 +65,7 @@ Future<ShapeData> getShapeData() async {
 }
 ```
 
-_TODO 3-4_ - Generate `color`, `height` and `width` values - `color` is a random RGB value while `height` and `width` are integer values between _150,0_ and _250,0_. Use them to create a `ShapeData` result:
+_TODO 3-4_ - Generate `color`, `height` and `width` values - `color` is a random RGB value while `height` and `width` are integer values between _150.0_ and _250.0_. Use them to create a `ShapeData` result:
 
 ```
 Future<ShapeData> getShapeData() async {

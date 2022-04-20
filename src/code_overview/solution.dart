@@ -1,3 +1,5 @@
+import 'dart:math' as math show Random;
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -107,10 +109,24 @@ class ShapeRepository {
   const ShapeRepository();
 
   Future<ShapeData> getShapeData() async {
+    final random = math.Random();
+
     // Simulate asynchronous data loading
     await Future.delayed(const Duration(seconds: 1));
 
-    return const ShapeData(color: Colors.blue, height: 200.0, width: 200.0);
+    // Simulate data loading error
+    if (random.nextBool()) throw ShapeDataException();
+
+    final color = Color.fromRGBO(
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextInt(255),
+      1.0,
+    );
+    final height = 150.0 + random.nextInt(100);
+    final width = 150.0 + random.nextInt(100);
+
+    return ShapeData(color: color, height: height, width: width);
   }
 }
 

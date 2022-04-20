@@ -34,21 +34,54 @@ class ShapeRepository {
   const ShapeRepository();
 
   Future<ShapeData> getShapeData() async {
-    final random = math.Random();
-
-    // Simulate asynchronous data loading
-    await Future.delayed(const Duration(seconds: 1));
-
-    // Simulate data loading error
-    if (random.nextBool()) throw ShapeDataException();
-
-    final color = <...>;
-    final height = <...>;
-    final width = <...>;
-
-    return ShapeData(color: color, height: height, width: width);
+    <...>
   }
 }
 ```
 
-Next, you will start with shaping (no pun intended) _BLoC_ related classes.
+_TODO 1_ - First of all, create an instance of `math.Random()` to generate `boolean` and `int` values:
+
+```
+Future<ShapeData> getShapeData() async {
+  final random = math.Random();
+
+  // Simulate asynchronous data loading
+  await Future.delayed(const Duration(seconds: 1));
+
+  <...>
+}
+```
+
+_TODO 2_ - To simulate a data loading error, generate a `boolean` value. If the result is `true`, throw a `ShapeDataException`:
+
+```
+Future<ShapeData> getShapeData() async {
+  <...>
+
+  // Simulate data loading error
+  if (random.nextBool()) throw ShapeDataException();
+
+  <...>
+}
+```
+
+_TODO 3-4_ - Generate `color`, `height` and `width` values - `color` is a random RGB value while `height` and `width` are integer values between _150,0_ and _250,0_. Use them to create a `ShapeData` result:
+
+```
+Future<ShapeData> getShapeData() async {
+  <...>
+
+  final color = Color.fromRGBO(
+    random.nextInt(255),
+    random.nextInt(255),
+    random.nextInt(255),
+    1.0,
+  );
+  final height = 150.0 + random.nextInt(100);
+  final width = 150.0 + random.nextInt(100);
+
+  return ShapeData(color: color, height: height, width: width);
+}
+```
+
+The data layer of this workshop is ready to use. Next, you will start shaping (no pun intended) _BLoC_ related classes.

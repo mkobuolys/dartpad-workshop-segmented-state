@@ -1,3 +1,5 @@
+// TODO (5): Remove this line
+// ignore_for_file: unused_import
 import 'dart:math' as math show Random;
 
 import 'package:flutter/material.dart';
@@ -109,24 +111,17 @@ class ShapeRepository {
   const ShapeRepository();
 
   Future<ShapeData> getShapeData() async {
-    final random = math.Random();
+    // TODO (1): Create an instance of math.Random()
 
     // Simulate asynchronous data loading
     await Future.delayed(const Duration(seconds: 1));
 
-    // Simulate data loading error
-    if (random.nextBool()) throw ShapeDataException();
+    // TODO (2): If random.nextBool() returns true, throw ShapeDataException
 
-    final color = Color.fromRGBO(
-      random.nextInt(255),
-      random.nextInt(255),
-      random.nextInt(255),
-      1.0,
-    );
-    final height = 150.0 + random.nextInt(100);
-    final width = 150.0 + random.nextInt(100);
+    // TODO (3): Generate color, height and width values
 
-    return ShapeData(color: color, height: height, width: width);
+    // TODO (4): Use generated values to create a ShapeData object
+    return const ShapeData(color: Colors.blue, height: 200.0, width: 200.0);
   }
 }
 

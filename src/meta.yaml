@@ -7,7 +7,7 @@ steps:
     has_solution: false
   - name: Code overview
     directory: code_overview
-    has_solution: false
+    has_solution: true
   - name: BLoC base
     directory: bloc_base
     has_solution: true

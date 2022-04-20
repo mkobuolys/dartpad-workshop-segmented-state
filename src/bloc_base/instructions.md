@@ -24,7 +24,7 @@ class ShapeState {
 }
 ```
 
-_TODO 3_ - Finally, using the `flutter_bloc` library, create a `ShapeBloc` that uses the defined `ShapeEvent` and `ShapeState` classes. Notice that the `ShapeBloc` stores a reference to `ShapeRepository` that will handle events and load data later:
+_TODO 3_ - Finally, using the [`flutter_bloc`](https://pub.dev/packages/flutter_bloc) library, create a `ShapeBloc` that uses the defined `ShapeEvent` and `ShapeState` classes. Notice that the `ShapeBloc` stores a reference to `ShapeRepository` that will handle events and load data later:
 
 ```
 class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {

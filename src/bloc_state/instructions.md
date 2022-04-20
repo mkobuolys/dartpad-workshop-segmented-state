@@ -93,6 +93,6 @@ class ShapeState {
 }
 ```
 
-In real-world projects, it is recommended to use packages like [equatable](https://pub.dev/packages/equatable) or [freezed](https://pub.dev/packages/freezed) that will cover the required equality comparison overrides for you.
+In real-world projects, it is recommended to use packages like [`equatable`](https://pub.dev/packages/equatable) or [`freezed`](https://pub.dev/packages/freezed) that will cover the required equality comparison overrides for you.
 
 In the next step, you will implement the actual data loading and handle the _Segmented State_ of the `ShapeBloc`.

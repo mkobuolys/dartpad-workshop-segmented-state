@@ -1,5 +1,6 @@
 # Create BLoC classes
 
+<!-- Very concise and clear explanations! Well done :) -->
 Each Business Logic Component (_BLoC_) consists of three parts: _BLoC_, _Events_ and _State_. In this step, you will add them to the app.
 
 When you need to execute a specific operation in the _BLoC_, an event must be sent from the UI. Then, the concrete _BLoC_ handles the event and updates the state.
@@ -24,7 +25,7 @@ class ShapeState {
 }
 ```
 
-_TODO 3_ - Finally, using the [`flutter_bloc`](https://pub.dev/packages/flutter_bloc) library, create a `ShapeBloc` that uses the defined `ShapeEvent` and `ShapeState` classes. Notice that the `ShapeBloc` stores a reference to `ShapeRepository` that will handle events and load data later:
+_TODO 3_ - Finally, using the [`flutter_bloc`](https://pub.dev/packages/flutter_bloc) library, create a `ShapeBloc` that uses the defined `ShapeEvent` and `ShapeState` classes. Notice that the `ShapeBloc` stores a reference to `ShapeRepository`, which is used to load shape data:
 
 ```
 class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {

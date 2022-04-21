@@ -46,6 +46,11 @@ class ShapeState {
 }
 ```
 
+<!-- What happened to Initial? Depending on the experience, initial is important 
+and distinct from Loading, Success, or error states. For example, the initial 
+state might prompt someone to enter text in a text box. If it an initial state 
+isn't necessary for this app, I'd consider removing it from the list of classes 
+mentioned above since it feels like an omission here :) -->
 As you may notice, the _success_ state is covered by the `data` property, error - by `error` one, and `isLoading` shows whether the data load is in progress or not.
 
 _TODO 3_ - Also, it's practical to add some helper methods to your state, like `copyWith()`. This method is used when you need to clone the current state but only change some properties of it:
@@ -89,7 +94,8 @@ class ShapeState {
   }
 
   @override
-  int get hashCode => data.hashCode ^ error.hashCode ^ isLoading.hashCode;
+  // Use Object.hash instead?
+  int get hashCode => Object.hash(data, error, isLoading);
 
   <...>
 }

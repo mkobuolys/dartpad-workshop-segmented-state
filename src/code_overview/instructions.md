@@ -6,6 +6,10 @@ Throughout this workshop, you will build on this codebase. You will implement th
 
 Try to run the app now. You should notice that a shape placeholder is rendered in the center of the screen. Also, there is a floating action button that does nothing at the moment, but later it will trigger the shape's data loading.
 
+<!-- Why are ShapeView and ShapePage separate? ShapePage just calls to 
+ShapeView? Even in later steps, it looks like all it does is wrap the ShapeView
+with a BlocProvider? Couldn't the `ShapePage` define the layout code (Scaffold) for 
+the page? Or remove the ShapePage entirely? --> 
 The UI code at the moment consists of `ShapePage` and `ShapeView` that renders the page with a basic `Scaffold` and its elements: app bar, floating action button, and body:
 
 ```
@@ -27,6 +31,7 @@ Scaffold(
 
 Following the _Shape data_ section in the file, you could find a custom exception - `ShapeDataException`, shape data source - `ShapeRepository` - and the `ShapeData` model itself.
 
+<!-- Maybe talk about what repositories do in general? -->
 `ShapeRepository` will be used by the implemented _BLoC_ class. The repository is responsible for generating `ShapeData` properties and simulating an asynchronous data load - success or error:
 
 ```

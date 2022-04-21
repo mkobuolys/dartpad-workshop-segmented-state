@@ -143,7 +143,8 @@ class ShapeState {
   // TODO (2): Add constructor parameters
   const ShapeState();
 
-  // TODO (1): Add color, height and width properties
+  // I think this was a mistake? The width etc should belong to ShapeData?
+  // TODO (1): Add data, error and isLoading properties
 
   // TODO (3): Add copyWith() method
 

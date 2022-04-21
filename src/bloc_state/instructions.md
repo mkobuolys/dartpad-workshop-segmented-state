@@ -71,7 +71,7 @@ class ShapeState {
 }
 ```
 
-_TODO 4-5_ - Lastly, you need to override the equality operator (`==`) and `hashCode` getter so that state objects are compared by their property values and not the class reference:
+_TODO 4-5_ - Then, you need to override the equality operator (`==`) and `hashCode` getter so that state objects are compared by their property values and not the class reference:
 
 ```
 @immutable
@@ -90,6 +90,22 @@ class ShapeState {
 
   @override
   int get hashCode => data.hashCode ^ error.hashCode ^ isLoading.hashCode;
+
+  <...>
+}
+```
+
+_TODO 6_ - Lastly, override the `toString()` method that will help you print a more beautiful output of the current state:
+
+```
+@immutable
+class ShapeState {
+  <...>
+
+  @override
+  String toString() {
+    return 'ShapeState(data: $data, error: $error, isLoading: $isLoading)';
+  }
 }
 ```
 

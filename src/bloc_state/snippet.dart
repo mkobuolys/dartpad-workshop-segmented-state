@@ -6,10 +6,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(
-    const SegmentedStateApp(
-      shapeRepository: ShapeRepository(),
+  BlocOverrides.runZoned(
+    () => runApp(
+      const SegmentedStateApp(
+        shapeRepository: ShapeRepository(),
+      ),
     ),
+    blocObserver: SegmentedStateBlocObserver(),
   );
 }
 
@@ -142,11 +145,30 @@ class ShapeState {
 
   // TODO (1): Add color, height and width properties
 
-  // TODO (3): Add copyWith method
+  // TODO (3): Add copyWith() method
 
   // TODO (4): Override equality operator
 
   // TODO (5): Override hashCode getter
+
+  // TODO (6): Override toString() method
+}
+
+// --------------------------------------------
+// BLoC observer
+
+class SegmentedStateBlocObserver extends BlocObserver {
+  @override
+  void onCreate(BlocBase bloc) {
+    super.onCreate(bloc);
+    print('BLoC created');
+  }
+
+  @override
+  void onChange(BlocBase bloc, Change change) {
+    super.onChange(bloc, change);
+    print('BLoC state changed: $change');
+  }
 }
 
 // --------------------------------------------
@@ -206,4 +228,9 @@ class ShapeData {
 
   @override
   int get hashCode => color.hashCode ^ height.hashCode ^ width.hashCode;
+
+  @override
+  String toString() {
+    return 'ShapeData(color: $color, height: $height, width: $width)';
+  }
 }

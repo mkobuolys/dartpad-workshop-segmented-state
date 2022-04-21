@@ -1,6 +1,6 @@
 # Render _success_ state (shape data)
 
-Finally, it's time to get to the visual part of this workshop 🎉
+Finally, it's time to get to the visual part of this workshop! 💙
 
 First stop - observing and handling the `data` property, or the _success_ state.
 
@@ -46,4 +46,4 @@ Widget build(BuildContext context) {
 }
 ```
 
-Run the code to see how the _success_ state is handled in UI. Notice that the loaded shape pops on the screen without any indication of data loading. Thus, you will handle the _loading_ state next!
+Run the code to see how the _success_ state is handled in UI. Notice that the loaded shape pops on the screen without any indication of data loading? Or that nothing happens in case of an error? Thus, you will handle the _loading_ and _error_ states in the next steps!

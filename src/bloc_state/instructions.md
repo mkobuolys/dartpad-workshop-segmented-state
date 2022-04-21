@@ -8,8 +8,6 @@ abstract class ShapeState {
   const ShapeState();
 }
 
-class ShapeInitial extends ShapeState {}
-
 class ShapeLoading extends ShapeState {}
 
 class ShapeSuccess extends ShapeState {
@@ -89,7 +87,7 @@ class ShapeState {
   }
 
   @override
-  int get hashCode => data.hashCode ^ error.hashCode ^ isLoading.hashCode;
+  int get hashCode => Object.hash(data, error, isLoading);
 
   <...>
 }

@@ -1,6 +1,8 @@
 # Render _error_ state
 
-The last workflow to handle is the _error_ state. In case of a data loading error, it would be nice to show a `SnackBar` with the error message stored in the `ShapeDataException` object. Is it complex to implement? Not at all!
+The last workflow to handle is the _error_ state. In case of a data loading error, it would be nice to show a `SnackBar` with the error message stored in the `ShapeDataException` object. Furthermore, it would also be nice to display the previously loaded shape. After all, that is the benefit of the Segmented State Pattern!
+
+Is it complex to implement? Not at all!
 
 ## Use `error` property
 

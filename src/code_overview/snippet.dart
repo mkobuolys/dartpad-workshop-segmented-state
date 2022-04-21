@@ -168,7 +168,7 @@ class ShapeData {
   }
 
   @override
-  int get hashCode => color.hashCode ^ height.hashCode ^ width.hashCode;
+  int get hashCode => Object.hash(color, height, width);
 
   @override
   String toString() {

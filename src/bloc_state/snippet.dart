@@ -143,7 +143,7 @@ class ShapeState {
   // TODO (2): Add constructor parameters
   const ShapeState();
 
-  // TODO (1): Add color, height and width properties
+  // TODO (1): Add data, error and isLoading properties
 
   // TODO (3): Add copyWith() method
 
@@ -227,7 +227,7 @@ class ShapeData {
   }
 
   @override
-  int get hashCode => color.hashCode ^ height.hashCode ^ width.hashCode;
+  int get hashCode => Object.hash(color, height, width);
 
   @override
   String toString() {

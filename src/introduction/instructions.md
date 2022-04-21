@@ -15,7 +15,7 @@ Feel free to reach out if you have any problems or questions during the workshop
 
 ![BLoC](https://dartpad-ws-segmented-state.web.app/images/bloc.png)
 
-_Business Logic Component_ (_BLoC_) is a design pattern that helps you separate the business logic from the representation layer and reuse the code more efficiently. The main idea of this pattern is to use _Streams_ and _Reactive Programming_ principles to pass events to _BLoC_ and subscribe to the changes in the state. For more information about this pattern, see [Reactive Programming - Streams - BLoC](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/).
+_Business Logic Component_ (_BLoC_) is a design pattern that helps you separate the business logic from the presentation layer (Flutter widgets) and reuse the code more efficiently. The main idea of this pattern is to send events from your presentation layer to a _BLoC_ object, which processes the events and emits new states through a `Stream`. The presentation layer listens to the `Stream` and rebuilds the UI when a new state is emitted. For more information about this pattern, see [Reactive Programming - Streams - BLoC](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/).
 
 [`bloc`](https://pub.dev/packages/bloc) is a Dart package that implements the _BLoC_ design pattern and abstracts the underlying low-level logic of _Streams_, implements the base building blocks (classes) of the _BLoC_ state management solution, like `Cubit` or `Bloc`.
 

@@ -185,7 +185,7 @@ class ShapeState {
   }
 
   @override
-  int get hashCode => data.hashCode ^ error.hashCode ^ isLoading.hashCode;
+  int get hashCode => Object.hash(data, error, isLoading);
 
   @override
   String toString() {
@@ -266,7 +266,7 @@ class ShapeData {
   }
 
   @override
-  int get hashCode => color.hashCode ^ height.hashCode ^ width.hashCode;
+  int get hashCode => Object.hash(color, height, width);
 
   @override
   String toString() {

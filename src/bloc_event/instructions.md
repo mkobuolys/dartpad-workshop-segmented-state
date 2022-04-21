@@ -62,7 +62,7 @@ Widget build(BuildContext context) {
 }
 ```
 
-If you run the app now, you should notice that _"on ShapeLoadStarted"_ is printed in the DartPad console once the _FAB_ is tapped.
+If you run the app now, you should notice that the `ShapeBloc` is lazily instantiated and _"on ShapeLoadStarted"_ is printed in the DartPad console once the _FAB_ is tapped.
 
 **Congratulations!** You have connected your UI with `ShapeBloc`!
 

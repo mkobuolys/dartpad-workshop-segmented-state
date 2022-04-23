@@ -59,3 +59,5 @@ class State {
 This way, you always have three different flows in your state at any given moment. Hence, it becomes easier to transform, combine and later observe them.
 
 In the next step, you will review the initial code of this workshop.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step1&dt=introduction&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

@@ -90,3 +90,5 @@ Thanks to the `SegmentedStateBlocObserver`, the state change events are printed 
 You were reusing the same state type and used the `copyWith()` method to create new state instances with updated individual properties. The state changes will be observed later on by the UI and used to render the specific components or execute additional logic.
 
 Next, you will handle the `ShapeState` in the UI layer, starting with the success state!
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step6&dt=handle_segmented_state&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

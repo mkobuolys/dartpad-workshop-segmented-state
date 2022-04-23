@@ -51,3 +51,5 @@ Widget build(BuildContext context) {
 Run the code and tap on the floating action button to see how the loading state is handled in UI once you initiate the data load. Notice that the _FAB_ even supports a smooth scale transition out of the box!
 
 Indeed, the `CircularProgressIndicator` renders correctly. However, the shape does not get updated in error cases, and no visual indication is visible in the UI. The last state workflow to handle is the _error_ one.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step8&dt=render_loading_state&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

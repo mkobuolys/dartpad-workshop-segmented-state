@@ -110,3 +110,5 @@ class ShapeState {
 In real-world projects, it is recommended to use packages like [`equatable`](https://pub.dev/packages/equatable) or [`freezed`](https://pub.dev/packages/freezed) that will cover the required equality comparison overrides for you.
 
 In the next step, you will implement the actual data loading and handle the _Segmented State_ of the `ShapeBloc`.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step5&dt=implement_shape_state&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

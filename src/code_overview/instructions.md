@@ -85,3 +85,5 @@ Future<ShapeData> getShapeData() async {
 ```
 
 The data layer of this workshop is ready to use. Next, you will start shaping (no pun intended) _BLoC_ related classes.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step2&dt=code_overview&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

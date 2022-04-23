@@ -67,3 +67,5 @@ If you run the app now, you should notice that the `ShapeBloc` is lazily instant
 **Congratulations!** You have connected your UI with `ShapeBloc`!
 
 Next, you will focus on the `ShapeState` class and implement its details.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step4&dt=implement_load_event&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

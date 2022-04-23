@@ -63,3 +63,5 @@ class ShapeView extends StatelessWidget {
 Now, the `listener` will be triggered only on the `error` property change.
 
 You can run the app now and see the outcome of this workshop. All different state workflows are handled - after each data load, either the shape is updated, or the error message appears at the bottom of the screen.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step9&dt=render_error_state&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

@@ -38,3 +38,5 @@ class ShapeBloc extends Bloc<ShapeEvent, ShapeState> {
 ```
 
 Now, it's time to add a specific `ShapeEvent` that triggers the `ShapeData` load inside the `ShapeBloc`.
+
+<img alt="Google Analytics" src="https://www.google-analytics.com/collect?v=1&cid=1&t=pageview&ec=workshop&ea=open&dp=%3Fwebserver%3Dhttps%3A%2F%2Fdartpad-ws-segmented-state.web.app%23Step3&dt=create_bloc_classes&tid=UA-226953365-1" style="width: 1px; height: 1px"/>

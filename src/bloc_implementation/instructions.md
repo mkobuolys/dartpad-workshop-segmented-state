@@ -85,8 +85,8 @@ Future<void> _onShapeLoadStarted(
 }
 ```
 
-Notice how the state change events are printed in the console - it's working! 🎉
+Thanks to the `SegmentedStateBlocObserver`, the state change events are printed in the console - it's working! 🎉
 
-You were reusing the same state and updated individual properties - the state changes will be observed later on by the UI and used to render the specific components or execute additional logic.
+You were reusing the same state type and used the `copyWith()` method to create new state instances with updated individual properties. The state changes will be observed later on by the UI and used to render the specific components or execute additional logic.
 
 Next, you will handle the `ShapeState` in the UI layer, starting with the success state!

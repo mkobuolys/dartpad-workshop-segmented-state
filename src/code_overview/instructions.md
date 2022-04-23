@@ -25,7 +25,7 @@ Scaffold(
 
 ## Shape data classes
 
-Following the _Shape data_ section in the file, you could find a custom exception - `ShapeDataException`, shape data source - `ShapeRepository` - and the `ShapeData` model itself.
+Locate the _Shape data_ section in the code snippet. Here you will find a custom exception - `ShapeDataException`, shape data source - `ShapeRepository`, and the `ShapeData` model itself.
 
 `ShapeRepository` will be used by the implemented _BLoC_ class. The repository is responsible for generating `ShapeData` properties and simulating an asynchronous data load - success or error:
 

@@ -7,6 +7,7 @@ In this workshop, you will learn the principles of a segmented state and how to 
 This workshop is authored by Mangirdas Kazlauskas 🇱🇹💙
 
 - Twitter: [@mkobuolys](https://twitter.com/mkobuolys)
+- YouTube: [mkobuolys](https://youtube.com/mkobuolys)
 - GitHub: [@mkobuolys](https://github.com/mkobuolys)
 
 Feel free to reach out if you have any problems or questions during the workshop!

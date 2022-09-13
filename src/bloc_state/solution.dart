@@ -6,13 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  BlocOverrides.runZoned(
-    () => runApp(
-      const SegmentedStateApp(
-        shapeRepository: ShapeRepository(),
-      ),
+  Bloc.observer = SegmentedStateBlocObserver();
+
+  runApp(
+    const SegmentedStateApp(
+      shapeRepository: ShapeRepository(),
     ),
-    blocObserver: SegmentedStateBlocObserver(),
   );
 }
 
